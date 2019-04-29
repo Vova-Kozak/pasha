@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Guest book{% endblock %}
+
+
+
+{% block body %}
+    {{ form_start(form) }}
+    <!-- Highlights -->
+    <section class="wrapper">
+        <div class="inner">
+            <header class="special">
+                <h2>Sem turpis amet semper</h2>
+                <p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor.</p>
+            </header>
+            <div class="highlights">
+                <section id="main" class="wrapper">
+
+                    <h3>Sign up</h3>
+
+                        <div class="row gtr-uniform">
+                            <div class="col-6 col-12-xsmall">
+                                {{ form_row(form.username) }}
+
+                                <br />
+
+                                {{ form_row(form.email) }}
+                            </div>
+
+                            <div class="col-6 col-12-xsmall">
+                                {{ form_row(form.plainPassword.first) }}
+
+                                <br />
+
+                                {{ form_row(form.plainPassword.second) }}
+                            </div>
+
+                            <div class="col-12">
+                                <ul class="actions">
+                                    <li><button type="submit">Register!</button></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                </section>
+            </div>
+        </div>
+    </section>
+
+    {{ form_end(form) }}
+
+
+
+{% endblock %}

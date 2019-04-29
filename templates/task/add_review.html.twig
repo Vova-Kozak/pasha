@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block title %}Guest book{% endblock %}
+{% block body %}
+    {{ form_start(form) }}
+    {{ fform_widget(form)  }}
+{#    {{ form_row(form.e_mail) }}#}
+{#    {{ form_row(form.user_homepage) }}#}
+{#    {{ form_row(form.user_review) }}#}
+
+    <button type="submit">Go!</button>
+
+    {{ form_end(form) }}
+{% endblock %}

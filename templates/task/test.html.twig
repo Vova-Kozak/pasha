@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block title %}Guest book{% endblock %}
+{% block body %}
+{{ form_start(form) }}
+    {{ form_row(form.username) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.plainPassword.first) }}
+    {{ form_row(form.plainPassword.second) }}
+
+    <button type="submit">Register!</button>
+    {% if is_granted('ROLE_ADMIN') and is_granted('ROLE_USER')  %}
+    <a href="{{ logout_path() }}" class="btn btn-danger">Logout</a>
+    {% endif %}
+{{ form_end(form) }}
+{% endblock %}

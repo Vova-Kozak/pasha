@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+
+
+    <a >
+    <h1>{{ title }}</h1>
+    </a>
+
+    <section id="main" class="wrapper">
+    {% for comment in comments %}
+        {% for name in names %}
+        <div class="inner">
+            <div class="content">
+
+        <header>
+                    <h2>{{ name }}</h2>
+                </header>
+
+
+
+                <p>{{ comment }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    {% endfor %}
+    </section>
+
+<h2>Comments ({{ comments|length }})</h2>
+<ul>
+
+{#    {% for comment in comments %}#}
+{#        <li>{{ comment }}</li>#}
+{#    {% endfor %}#}
+</ul>
+{% endblock %}
